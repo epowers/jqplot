@@ -10,6 +10,9 @@
     <!-- Files names for distribution -->
     <property name="JQPLOT" value="jquery.jqplot.js" />
     <property file="dist.props" />
+
+    <!-- Plugins to compile into main source -->
+    <property name="CONCAT_PLUGINS" value="/" />
     
     <!-- misc. properties -->
     <property description="YUICompressor" name="YUICompressor" value="extras/yuicompressor-2.4.7.jar" />
@@ -141,6 +144,7 @@
             <fileset dir="${BUILD_DIR}" includes="jqplot.sprintf.js" />
             <fileset dir="${BUILD_DIR}" includes="jqplot.effects.core.js" />
             <fileset dir="${BUILD_DIR}" includes="jqplot.effects.blind.js" />
+            <fileset dir="${BUILD_DIR}/plugins" includes="${CONCAT_PLUGINS}" />
         </concat>
         
     </target>
